@@ -1,0 +1,258 @@
+
+<form-validation>
+	<global>
+		<constant>
+			<constant-name>character</constant-name>
+				<constant-value>^[a-zA-Z]*$</constant-value>
+		</constant>
+	</global>
+	<formset>
+	
+	<!--Add khata remarks Start-->	
+	<form name="addKhataRemarksForm">
+		<field property="plotList" depends="required"> 
+	       <arg0 key="addKhataRemarksForm.plotList" />
+	    </field>
+      	<field property="date" depends="date">
+			<arg0 key="addKhataRemarksForm.date"/>
+				<var>
+					<var-name>datePattern</var-name>
+					<var-value>MM/dd/yyyy</var-value>
+				</var>
+		</field>
+		<field property="remarks" depends="required">
+			<arg0 key="addKhataRemarksForm.remarks" />
+		</field>
+
+		<field property="amounts" depends="integer,float"> 
+	       <arg0 key="addKhataRemarksForm.amounts" />
+	    </field>
+		
+		<field property="bankName" depends="required,unicode">
+		   <arg0 key="addKhataRemarksForm.bankName"/>
+			<arg1 key="addKhataRemarksForm.bankName"/>
+				
+		</field>
+	</form>
+	<!--Add khata remarks End-->
+	
+	<form name="commentsForm">
+		<field property="comments" depends="required">
+			<arg0 key="commentsForm.comments" />
+		</field>
+	</form>
+		
+	<form name="FileUploadForm">
+      	<field property="userFile" depends="required"> 
+	       <arg0 key="FileUploadForm.userFile" />
+	    </field>
+	    <field property="comments" depends="required">
+	      <arg0 key="FileUploadForm.userFile" />
+	    </field>
+	</form>
+	
+	<!--New Role Creation-->
+	<form name="roleform">
+      	<field property="roleName" depends="required"> 
+      	<!--   <msg name="mask" key="roleform.roleName.mask" />     
+	       <arg0 key="roleform.roleName" />
+	       <var>
+	       	<var-name>mask</var-name>
+	        <var-value>^[a-zA-Z]*$</var-value>
+	       </var> -->
+	    </field>
+      	<field property="description"  depends="required">	      
+	       <arg0 key="roleform.description" />
+	    </field>
+	    <field property="active" depends="required">	      
+	       <arg0 key="roleform.active" />
+	    </field>
+    </form>
+    <!--New Role Ends -->
+    
+    <!-- newUser Starts -->
+   <form name="userRoleForm">
+      	<field property="userName" depends="required"> 
+      	 <!--  <msg name="mask" key="userRoleForm.userName.mask" />     
+	       <arg0 key="userRoleForm.userId" />
+	       <var>
+	        <var-name>mask</var-name>
+	        <var-value>^[a-zA-Z]{1}[a-zA-Z0-9]*$</var-value>
+	       </var> -->
+	    </field>
+      	<field property="password"  depends="required">	      
+	       <arg0 key="userRoleForm.password" />
+	    </field>
+	    <!--<field property="description" depends="required,mask">
+	       <msg name="mask" key="userRoleForm.description.mask" />    	      
+	       <arg0 key="userRoleForm.userName" />
+ 	          <var>
+	             <var-name>mask</var-name>
+	             <var-value>${character}</var-value>
+	       	  </var>
+		</field>-->
+		<field property="description" depends="required">    	      
+	       <arg0 key="userRoleForm.userName" />
+ 	     </field>
+		
+    </form>
+   <!-- newUser Ends -->
+   
+   
+   <form name="DistrictEntryForm">
+   <field property="description" depends="required,unicode">
+   <arg0 key="errors.disttname" name="required" />
+     <arg1 key="errors.disttname" name="unicode" />
+   </field>
+    <field property="active" depends="required">
+   	<arg0 key="errors.active" name="required"/>
+   </field>
+  </form>
+  <form name="TehsilEntryForm">
+   <field property="description" depends="required,unicode">
+     <arg0 key="errors.tehsilname" name="required"/>
+      <arg1 key="errors.tehsilname" name="unicode"/>
+     
+   </field>
+    <field property="active" depends="required">
+   	<arg0 key="errors.active" name="required"/>
+   </field>
+  </form>
+
+ <form name="VillageEntryForm">
+   <field property="description" depends="required,unicode">
+     <arg0 key="errors.villageName" name="required"/>
+    <arg1 key="errors.villageName" name="unicode"/>
+        
+   </field>
+    <field property="active" depends="required">
+   	<arg0 key="errors.active" name="required"/>
+   </field>
+  </form>
+<form name="KhataCorrectionForm">
+
+   <field property="hidSearchValue" depends="khatasearchrequired">
+     
+   </field>
+
+   <field property="ownerName" depends="required,unicode">
+     <arg0 key="errors.ownername" name="required"/>
+    <arg1 key="errors.ownername" name="unicode"/>
+     
+   </field>
+   <field property="fatherName" depends="required,unicode">
+     <arg0 key="errors.fathername" name="required"/>
+     <arg1 key="errors.fathername" name="unicode"/>
+    </field>
+  
+  <field property="permanentAddr" depends="notReqmaxlength">
+    <arg0 key="errors.permanent"/>
+    <arg1 key="errors.permanentGreater"/>
+    <var>
+      <var-name>maxlength
+      </var-name>
+      <var-value>255
+      </var-value>
+     </var>
+   </field>
+   
+   <field property="corresspondAddr" depends="notReqmaxlength">
+    <arg0 key="errors.corresspond"/>
+    <arg1 key="errors.corresspondGreater"/>
+    <var>
+      <var-name>maxlength
+      </var-name>
+      <var-value>255
+      </var-value>
+     </var>
+   </field>
+   
+   <field property="temporaryAddr" depends="notReqmaxlength">
+    <arg0 key="errors.temporary"/>
+    <arg1 key="errors.temporaryGreater"/>
+    <var>
+      <var-name>maxlength
+      </var-name>
+      <var-value>255
+      </var-value>
+     </var>
+   </field>
+  </form>
+  
+   <form name="P23Form">
+     <field property="comment" depends="required,maxlength">
+       <arg0 key="errors.comment"/>
+       <arg1 key="errors.commentGreater"/>
+       <var>
+       <var-name>maxlength
+       </var-name>
+       <var-value>200</var-value>
+       </var>
+      
+     </field>
+   </form>
+  
+  
+  <form name="SimpleSearchForm">
+  <field property="KhataNo" depends="notReqinteger">
+       <arg0 key="errors.khataNumber"/>
+       
+     </field>
+     <field property="Place" depends="unicode">
+       <arg1 key="errors.villageName"/>
+       
+     </field>
+     <field property="Owner" depends="unicode">
+       <arg1 key="errors.ownername"/>
+       
+     </field>
+   </form>
+
+<form name="advanceSearchForm">
+
+   <field property="khataNumber" depends="notReqinteger">
+   <arg0 key="errors.khataNumber"/>
+  </field>
+    
+  <field property="villageName" depends="unicode">
+   <arg1 key="errors.villageName"/>
+  </field>
+  
+  <field property="ownerName" depends="unicode">
+   <arg1 key="errors.ownername"/>
+  </field>
+  
+  <field property="fatherName" depends="unicode">
+   <arg1 key="errors.fathername"/>
+  </field>
+  
+   <field property="plotArea" depends="notReqfloat">
+   <arg0 key="errors.plotarea"/>
+  </field>
+  
+  <field property="totalArea" depends="notReqfloat">
+   <arg0 key="errors.totalArea"/>
+  </field>
+  
+   <field property="lagan" depends="notReqfloat">
+   <arg0 key="errors.lagan"/>
+  </field>
+  
+  <field property="pasliYear" depends="notReqdate">
+   <arg0 key="errors.pasliYear"/>
+  </field>
+  
+  <field property="plotNo" depends="plot">
+   <arg1 key="errors.plotNo"/>
+  </field>
+  
+</form>
+	<form name="AssignUserForm">
+		<field property="userName" depends="required">
+			<arg0 key="userRoleForm.description"/>
+		</field>
+	</form>
+  </formset>	  
+ </form-validation>
+ 
+ 

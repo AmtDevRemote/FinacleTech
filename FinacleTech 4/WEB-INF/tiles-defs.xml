@@ -1,0 +1,190 @@
+<?xml version="1.0" encoding="ISO-8859-1" ?>
+
+<!DOCTYPE tiles-definitions PUBLIC
+"-//Apache Software Foundation//DTD Tiles Configuration 1.1//EN"
+"http://jakarta.apache.org/struts/dtds/tiles-config_1_1.dtd">
+
+<tiles-definitions>
+
+		<definition name="siteLayoutDef" path="/jsp/siteLayOut.jsp">
+			<put name="title" value="Computerised Land Records" />
+			<put name="header" value="/jsp/header.jsp" />
+			<put name="content" value="/jsp/viewingPendingApp.jsp" />
+		</definition>
+
+		<definition name="attachDoc" extends="siteLayoutDef" >
+			<put name="content" value="/jsp/attachDocuments.jsp" />
+		</definition>
+		
+		<definition name="forwardToRK" extends="siteLayoutDef" >
+			<put name="content" value="/jsp/assignUsers.jsp" />
+		</definition>
+		
+		<definition name="addKhataRemarks" extends="siteLayoutDef" >
+			<put name="content" value="/jsp/addKhataRemarks.jsp" />
+		</definition>
+		
+		<definition name="simpleSearch" extends="siteLayoutDef" >
+			<put name="content" value="/jsp/simpleSearch.jsp" />
+		</definition>
+
+
+		<definition name="khataSearchResult" extends="siteLayoutDef" >
+			<put name="content" value="/jsp/khataSearchResult.jsp" />
+		</definition>
+
+
+		<definition name="simpleSearchFailure" extends="siteLayoutDef" >
+			<put name="content" value="/jsp/simpleSearchFailure.jsp" />
+		</definition>
+    
+    
+       <definition name="pendingAppDef" extends="siteLayoutDef">
+           <put name="content" value="/jsp/viewingPendingApp.jsp" />
+      </definition>
+      
+      <definition name="advanceSearch" page="/jsp/siteLayOut.jsp">
+      	<put name="title" type="string" value="Computerized Land Record"/>
+      	<put name="header" value="/jsp/header.jsp"/>
+			<put name="content" value="/jsp/advanceSearch.jsp" />
+      </definition>
+	
+	  <definition name="advanceSearchFailure" extends="siteLayoutDef" >
+		<put name="content" value="/jsp/advanceSearchFailure.jsp" />
+	  </definition>
+  
+      <definition name="rlAttachDoc" page="/jsp/siteLayOut.jsp">
+      	<put name="title" type="string" value="Computerized Land Record"/>
+      	<put name="header" value="/jsp/header.jsp"/>
+      	<put name="content" value="/jsp/releaseAttachDocs.jsp"/>
+      </definition>
+      
+      <definition name="releaseRK" page="/jsp/siteLayOut.jsp">
+      	<put name="title" type="string" value="Computerized Land Record"/>
+      	<put name="header" value="/jsp/header.jsp"/>
+      	<put name="content" value="/jsp/releaseRK.jsp"/>
+      </definition>
+      
+      <definition name="treeframeset" page="/jsp/siteLayOut.jsp">
+           <put name="title" type="string" value="Computerized Land Record" />
+           <put name="header" value="/jsp/header.jsp" />
+           <put name="content" value="/jsp/treeframeset.jsp" />
+           
+      </definition>
+      
+      <definition name="khataCorrection" page="/jsp/siteLayOut.jsp">
+           <put name="title" type="string" value="Computerized Land Record" />
+           <put name="header" value="/jsp/header.jsp" />
+           <put name="content" value="/jsp/khataCorrection.jsp" />
+           
+      </definition>
+      
+       <definition name="khataCorrectionSearch" page="/jsp/siteLayOut.jsp">
+           <put name="title" type="string" value="Computerized Land Record" />
+           <put name="header" value="/jsp/header.jsp" />
+           <put name="content" value="/jsp/khataCorrectionSearch.jsp" />
+           
+      </definition>
+      
+       <definition name="kcAdvSearch" page="/jsp/siteLayOut.jsp">
+           <put name="title" type="string" value="Computerized Land Record" />
+           <put name="header" value="/jsp/header.jsp" />
+           <put name="content" value="/jsp/kcAdvanceSearch.jsp" />
+           
+      </definition>
+      
+      <definition name="khataCorrectionRk" page="/jsp/siteLayOut.jsp">
+           <put name="title" type="string" value="Computerized Land Record" />
+           <put name="header" value="/jsp/header.jsp" />
+           <put name="content" value="/jsp/khataCorrectionRK.jsp" />
+           
+      </definition>
+      
+       <definition name="khataCreation" page="/jsp/siteLayOut.jsp">
+           <put name="title" type="string" value="Computerized Land Record" />
+           <put name="header" value="/jsp/header.jsp" />
+           <put name="content" value="/jsp/khataCreation.jsp" />
+           
+      </definition>
+      
+       <definition name="kcUserAssign" page="/jsp/siteLayOut.jsp">
+           <put name="title" type="string" value="Computerized Land Record" />
+           <put name="header" value="/jsp/header.jsp" />
+           <put name="content" value="/jsp/userAssign.jsp" />           
+      </definition>
+
+       <definition name="enteringStateDef" page="/jsp/siteLayOut.jsp">
+           <put name="title" type="string" value="Computerized Land Record" />
+           <put name="header" value="/jsp/header.jsp" />
+           <put name="content" value="/jsp/enteringStateInformation.jsp" />
+           
+      </definition>
+            
+      <definition name="selectStateDef" page="/jsp/siteLayOut.jsp">
+           <put name="title" type="string" value="Computerized Land Record" />
+           <put name="header" value="/jsp/header.jsp" />
+           <put name="content" value="/jsp/editingStateInformation.jsp" />
+      </definition>
+      
+      <definition name="editStateDef" page="/jsp/siteLayOut.jsp">
+           <put name="title" type="string" value="Computerized Land Record" />
+           <put name="header" value="/jsp/header.jsp" />
+           <put name="content" value="/jsp/EditState.jsp" />
+      </definition>
+      
+      <definition name="listStateDef" page="/jsp/siteLayOut.jsp">
+           <put name="title" type="string" value="Computerized Land Record" />
+           <put name="header" value="/jsp/header.jsp" />
+           <put name="content" value="/jsp/listingStateInformation.jsp" />
+      </definition>
+      
+        <definition name="enteringDistrictDef" page="/jsp/siteLayOut.jsp">
+           <put name="title" type="string" value="Computerized Land Record" />
+           <put name="header" value="/jsp/header.jsp" />
+           <put name="content" value="/jsp/enteringDistrictInformation.jsp" />
+           
+      </definition>
+            
+      <definition name="selectDistrictDef" page="/jsp/siteLayOut.jsp">
+           <put name="title" type="string" value="Computerized Land Record" />
+           <put name="header" value="/jsp/header.jsp" />
+           <put name="content" value="/jsp/editingDistrictInformation.jsp" />
+      </definition>
+      
+      <definition name="editDistrictDef" page="/jsp/siteLayOut.jsp">
+           <put name="title" type="string" value="Computerized Land Record" />
+           <put name="header" value="/jsp/header.jsp" />
+           <put name="content" value="/jsp/EditDistrict.jsp" />
+      </definition>
+      
+      <definition name="listDistrictDef" page="/jsp/siteLayOut.jsp">
+           <put name="title" type="string" value="Computerized Land Record" />
+           <put name="header" value="/jsp/header.jsp" />
+           <put name="content" value="/jsp/listingDistrictInformation.jsp" />
+      </definition>
+      
+       <definition name="enteringTehsilDef" page="/jsp/siteLayOut.jsp">
+           <put name="title" type="string" value="Computerized Land Record" />
+           <put name="header" value="/jsp/header.jsp" />
+           <put name="content" value="/jsp/enteringTehsilInformation.jsp" />
+      </definition>
+      
+      <definition name="selectTehsilDef" page="/jsp/siteLayOut.jsp">
+           <put name="title" type="string" value="Computerized Land Record" />
+           <put name="header" value="/jsp/header.jsp" />
+           <put name="content" value="/jsp/editingTehsilInformation.jsp" />
+      </definition>
+
+      <definition name="editTehsilDef" page="/jsp/siteLayOut.jsp">
+           <put name="title" type="string" value="Computerized Land Record" />
+           <put name="header" value="/jsp/header.jsp" />
+           <put name="content" value="/jsp/editTehsil.jsp" />
+      </definition>
+      
+      <definition name="listTehsilDef" page="/jsp/siteLayOut.jsp">
+           <put name="title" type="string" value="Computerized Land Record" />
+           <put name="header" value="/jsp/header.jsp" />
+           <put name="content" value="/jsp/listingTehsilInformation.jsp" />
+      </definition>
+
+</tiles-definitions>

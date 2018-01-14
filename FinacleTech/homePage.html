@@ -1,0 +1,570 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+	<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+		<title>Untitled Document</title>
+		<link href="css/frames-styles.css" rel="stylesheet" type="text/css">
+		<SCRIPT LANGUAGE="JavaScript" type="text/JavaScript">
+var timerid = 0;
+var images = new Array("Tree.jpg","images/logo2.gif","images/logo.gif");
+var countimages = 0;
+
+function startTime()
+	{
+		if(timerid)
+		        {
+                timerid = 0;        
+                }        
+        var tDate = new Date();
+        if(countimages == images.length){
+                        countimages = 0;        
+                        }        
+        if(tDate.getSeconds() % 2 == 0)
+				        {
+				          	document.getElementById("img1").src = images[countimages];
+						  	document.getElementById("img2").src = images[countimages + 1];
+						  	document.getElementById("img3").src = images[countimages + 2];
+				            document.getElementById("img4").src = images[countimages + 3];      
+                        }        
+                        countimages++;
+                        timerid = setTimeout("startTime()", 1000);
+	}
+
+</SCRIPT>
+	</head>
+	<body onload="startTime();" class="framemenu">
+		<table width="100%" align="center" cellspacing="0" cellpadding="0"
+			border="0">
+			<tr valign="top">
+				<td width="10%">
+					<img id="logo" src="images/logo/01.JPG" width="200" height="100"
+						border="0" />
+				</td>
+				<td width="100%">
+					<table border="1" >
+						<tr align="right">
+							<td width="30%">
+								<img src="images/logo/finacle__12441.gif" height="30">
+							</td>
+							<td valign="bottom"  width="10%">
+								<img src="images/logo/Earth-08-june.gif" width="100%"
+									height="30">
+							</td>
+							<td width="80%" align="right" valign="top">
+								<a href="index.html" class="top_link1">Home</a>
+								<span class="top_link1">|</span>
+								<a href="contact.html" class="top_link1">Contact</a>
+								<span class="top_link1">|</span>
+								<a href="sitemap.html" class="top_link1">Site</a>
+							</td>
+						</tr>
+						<tr align="left">
+							<table border="0">
+								<tr>
+									<td width="53%">
+									</td>
+									<td>
+										<img id="logo" src="images/logo/tech_12596.gif" height="30" />
+									</td>
+								</tr>
+							</table>
+						</tr>
+					</table>
+				</td>
+			</tr>
+		</table>
+		<table width="100%" align="center" cellspacing="0" cellpadding="0"
+			border="0">
+			<!-- 
+			<tr>
+				<td width="311">
+					<img id="img1" src="Tree.jpg" width="311" height="178" border="0"
+						usemap="#Map" onclick="test();" />
+				</td>
+				<td width="218">
+					<img id="img2" src="Forest.jpg" width="311" height="178" border="0" />
+				</td>
+				<td width="189">
+					<img id="img3" src="Garden.jpg"
+						alt="Perfect Innovation To Ensure Sucess" width="311" height="178"
+						border="0" />
+				</td>
+				<td width="189">
+					<img id="img4" src="Waterfall.jpg"
+						alt="Perfect Innovation To Ensure Sucess" width="311" height="178"
+						border="0" />
+				</td>
+			</tr> -->
+			<tr>
+				<td colspan="5">
+					<table cellspacing="0" cellpadding="0" class="framequickmenu_body"
+						align="center" width="100%">
+						<tr>
+							<td class="framequickmenu_Tab" width="150" height="30"
+								align="center">
+								<a href="#" onClick="MM_openBrWindow('help')">Home</a> |
+							<td class="framequickmenu_Tab" width="150" height="30"
+								align="center">
+								<a href="#" onClick="MM_openBrWindow('faq')">Services</a> |
+							<td class="framequickmenu_Tab" width="150" height="30"
+								align="center">
+								<a href="#" onClick="MM_openBrWindow('about')">About Us</a>
+							<td class="framequickmenu_Tab" width="150" height="30"
+								align="center">
+								<a href="#" onClick="MM_openBrWindow('about')">Career</a>
+							<td class="framequickmenu_Tab" width="150" height="30"
+								align="center">
+								<a href="#" onClick="MM_openBrWindow('about')">Contact Us</a>
+							</td>
+						</tr>
+					</table>
+				</td>
+			</tr>
+		</table>
+
+		<table width="100%" cellspacing="0" cellpadding="0" align="center"
+			border="1">
+			<tr>
+				<td width="20%" align="left" valign="top" bgcolor="#F8FEFE">
+					<table width="100%" cellspacing="0" cellpadding="0"
+						class="framemenu_blue">
+						<tr>
+							<td class="left_bor" height="350">
+								<!-- #BeginLibraryItem "/Library/Leftlinks.lbi" -->
+								<table width="100% cellspacing=" 0"  ellpadding="0"
+									class="framemenu_blue">
+									<tr>
+										<td>
+											<table width="155" cellspacing="0" cellpadding="0">
+												<tr>
+													<td height="21">
+														<img src="images/bar-left2.gif" alt="" width="5"
+															height="21" border="0"></img>
+													</td>
+													<td class="framequickmenu_orange" width="100%" align="left">
+														<font color="white"><a href="#"
+															onclick='javascript:document.location.href="../CustomerConnect/login.jsp"'>Customer
+																Login</a> </font>
+													</td>
+													<td height="21">
+														<img src="images/bar-left.gif" alt="" width="5"
+															height="21" border="0"></img>
+													</td>
+												</tr>
+											</table>
+										</td>
+									</tr>
+									<tr>
+										<td>
+											&nbsp;
+										</td>
+									</tr>
+									<tr>
+										<td>
+											<table width="155" cellspacing="0" cellpadding="0">
+												<tr>
+													<td height="21">
+														<img src="images/bar-left2.gif" alt="" width="5"
+															height="21" border="0"></img>
+													</td>
+													<td class="framequickmenu_orange" width="100%" align="left">
+														<font color="white">Register</font>
+													</td>
+													<td height="21">
+														<img src="images/bar-left.gif" alt="" width="5"
+															height="21" border="0"></img>
+													</td>
+												</tr>
+											</table>
+										</td>
+									</tr>
+									<tr>
+										<td>
+											&nbsp;
+										</td>
+									</tr>
+								</table>
+								<!-- #EndLibraryItem -->
+							</td>
+						</tr>
+					</table>
+				</td>
+				<td width="60%" align="left" valign="top">
+					<table width="100%" cellspacing="0" cellpadding="0" border="0">
+						<tr valign="top">
+							<td>
+								<table width="100%" cellspacing="0" cellpadding="0">
+									<tr valign="top">
+										<td width="200" align="center" valign="top">
+											<table width="100%" cellspacing="0" cellpadding="0">
+												<tr>
+													<td>
+														<table width="100%" cellspacing="0" cellpadding="0">
+															<tr>
+																<td height="21">
+																	<img src="images/bar-right.gif" alt="" width="5"
+																		height="21" border="0"></img>
+																</td>
+																<td class="framequickmenu" width="100%" align="left">
+																	<font color="white">Finacle </font>
+																</td>
+																<td height="21">
+																	<img src="images/bar-right2.gif" alt="" width="5"
+																		height="21" border="0"></img>
+																</td>
+															</tr>
+														</table>
+													</td>
+												</tr>
+												<tr>
+													<td height="327" halign="left" valign="top"
+														class="both_bor">
+														<table width="100%" cellspacing="0" cellpadding="0">
+															<tr>
+																<td class="top_link">
+																	Finacle Technology deliver the right solution within
+																	the required timeframe, keeping in mind the unique
+																	business requirements..
+																</td>
+															</tr>
+
+														</table>
+													</td>
+												</tr>
+												<tr>
+													<td>
+														<table width="100%" cellspacing="0" cellpadding="0">
+															<tr>
+																<td height="21">
+																	<img src="images/bar-left2.gif" alt="" width="5"
+																		height="21" border="0"></img>
+																</td>
+																<td class="framequickmenu_orange" width="100%"
+																	align="left">
+																	<font color="white"></font>
+																</td>
+																<td height="21">
+																	<img src="images/bar-left.gif" alt="" width="5"
+																		height="21" border="0"></img>
+																</td>
+															</tr>
+														</table>
+													</td>
+												</tr>
+											</table>
+										</td>
+									</tr>
+									<tr>
+										<td>
+											&nbsp;
+										</td>
+									</tr>
+									<tr>
+										<td>
+											<!-- #BeginLibraryItem "/Library/boxes.lbi" -->
+											<table width="100%" cellspacing="0" cellpadding="0">
+												<tr valign="top">
+													<td width="200" align="center" valign="top">
+														<table width="155" cellspacing="0" cellpadding="0">
+															<tr>
+																<td>
+																	<table width="155" cellspacing="0" cellpadding="0">
+																		<tr>
+																			<td height="21">
+																				<img src="images/bar-right.gif" alt="" width="5"
+																					height="21" border="0"></img>
+																			</td>
+																			<td class="framequickmenu" width="100%" align="left">
+																				<font color="white">Finacle Tech</font>
+																			</td>
+																			<td height="21">
+																				<img src="images/bar-right2.gif" alt="" width="5"
+																					height="21" border="0"></img>
+																			</td>
+																		</tr>
+																	</table>
+																</td>
+															</tr>
+															<tr>
+																<td align="left" valign="top" class="both_bor">
+																	<table width="100%" cellspacing="0" cellpadding="0">
+																		<tr>
+																			<td class="top_link">
+																				Finacle Technology deliver the right solution within
+																				the required timeframe, keeping in mind the unique
+																				business requirements..
+																			</td>
+																		</tr>
+																		<tr>
+																			<td height="18" align="right">
+																				<a href="value_proposition.html"><img
+																						src="images/more.gif" alt="More" width="47"
+																						height="10" border="0" /> </a>
+																			</td>
+																		</tr>
+																	</table>
+																</td>
+															</tr>
+															<tr>
+																<td>
+																	<table width="155" cellspacing="0" cellpadding="0">
+																		<tr>
+																			<td height="21">
+																				<img src="images/bar-left2.gif" alt="" width="5"
+																					height="21" border="0"></img>
+																			</td>
+																			<td class="framequickmenu_orange" width="100%"
+																				align="left">
+																				<font color="white"></font>
+																			</td>
+																			<td height="21">
+																				<img src="images/bar-left.gif" alt="" width="5"
+																					height="21" border="0"></img>
+																			</td>
+																		</tr>
+																	</table>
+																</td>
+															</tr>
+
+														</table>
+													</td>
+													<td align="center" valign="top">
+														<table width="155" cellspacing="0" cellpadding="0">
+															<tr>
+																<td>
+																	<table width="155" cellspacing="0" cellpadding="0">
+																		<tr>
+																			<td>
+																				<table width="155" cellspacing="0" cellpadding="0">
+																					<tr>
+																						<td height="21">
+																							<img src="images/bar-right.gif" alt="" width="5"
+																								height="21" border="0"></img>
+																						</td>
+																						<td class="framequickmenu" width="100%"
+																							align="left">
+																							<font color="white">Finacle Tech</font>
+																						</td>
+																						<td height="21">
+																							<img src="images/bar-right2.gif" alt="" width="5"
+																								height="21" border="0"></img>
+																						</td>
+																					</tr>
+																				</table>
+																			</td>
+																		</tr>
+																		<tr>
+																			<td align="left" valign="top" class="both_bor">
+																				<table width="100%" cellspacing="0" cellpadding="0">
+																					<tr>
+																						<td class="top_link">
+																							Finacle Technology deliver the right solution
+																							within the required timeframe, keeping in mind
+																							the unique business requirements..
+																						</td>
+																					</tr>
+																					<tr>
+																						<td height="18" align="right">
+																							<a href="value_proposition.html"><img
+																									src="images/more.gif" alt="More" width="47"
+																									height="10" border="0" /> </a>
+																						</td>
+																					</tr>
+																				</table>
+																			</td>
+																		</tr>
+																		<tr>
+																			<td>
+																				<table width="155" cellspacing="0" cellpadding="0">
+																					<tr>
+																						<td height="21">
+																							<img src="images/bar-left2.gif" alt="" width="5"
+																								height="21" border="0"></img>
+																						</td>
+																						<td class="framequickmenu_orange" width="100%"
+																							align="left">
+																							<font color="white"></font>
+																						</td>
+																						<td height="21">
+																							<img src="images/bar-left.gif" alt="" width="5"
+																								height="21" border="0"></img>
+																						</td>
+																					</tr>
+																				</table>
+																			</td>
+																		</tr>
+
+
+																	</table>
+																</td>
+															</tr>
+														</table>
+													</td>
+													<td width="200" align="center" valign="top">
+														<table width="155" cellspacing="0" cellpadding="0">
+															<tr>
+																<td>
+																	<table width="155" cellspacing="0" cellpadding="0">
+																		<tr>
+																			<td>
+																				<table width="155" cellspacing="0" cellpadding="0">
+																					<tr>
+																						<td height="21">
+																							<img src="images/bar-right.gif" alt="" width="5"
+																								height="21" border="0"></img>
+																						</td>
+																						<td class="framequickmenu" width="100%"
+																							align="left">
+																							<font color="white">Finacle Tech</font>
+																						</td>
+																						<td height="21">
+																							<img src="images/bar-right2.gif" alt="" width="5"
+																								height="21" border="0"></img>
+																						</td>
+																					</tr>
+																				</table>
+																			</td>
+																		</tr>
+																		<tr>
+																			<td align="left" valign="top" class="both_bor">
+																				<table width="100%" cellspacing="0" cellpadding="0">
+																					<tr>
+																						<td class="top_link">
+																							Finacle Technology deliver the right solution
+																							within the required timeframe, keeping in mind
+																							the unique business requirements..
+																						</td>
+																					</tr>
+																					<tr>
+																						<td height="18" align="right">
+																							<a href="value_proposition.html"><img
+																									src="images/more.gif" alt="More" width="47"
+																									height="10" border="0" /> </a>
+																						</td>
+																					</tr>
+																				</table>
+																			</td>
+																		</tr>
+																		<tr>
+																			<td>
+																				<table width="155" cellspacing="0" cellpadding="0">
+																					<tr>
+																						<td height="21">
+																							<img src="images/bar-left2.gif" alt="" width="5"
+																								height="21" border="0"></img>
+																						</td>
+																						<td class="framequickmenu_orange" width="100%"
+																							align="left">
+																							<font color="white"></font>
+																						</td>
+																						<td height="21">
+																							<img src="images/bar-left.gif" alt="" width="5"
+																								height="21" border="0"></img>
+																						</td>
+																					</tr>
+																				</table>
+																			</td>
+																		</tr>
+
+																	</table>
+																</td>
+															</tr>
+														</table>
+													</td>
+												</tr>
+											</table>
+											<!-- #EndLibraryItem -->
+										</td>
+									</tr>
+									<tr>
+										<td>
+											&nbsp;
+										</td>
+									</tr>
+								</table>
+							</td>
+
+						</tr>
+						<tr>
+							&nbsp;
+						</tr>
+					</table>
+				</td>
+				<td width="20%" align="left" valign="top" bgcolor="#F8FEFE">
+					<table width="100%" cellspacing="0" cellpadding="0"
+						class="framemenu_blue">
+						<tr>
+							<td class="left_bor" height="350">
+								<!-- #BeginLibraryItem "/Library/Leftlinks.lbi" -->
+								<table width="100% cellspacing=" 0"  ellpadding="0"
+									class="framemenu_blue">
+									<tr>
+										<td>
+											<table width="155" cellspacing="0" cellpadding="0">
+												<tr>
+													<td height="21">
+														<img src="images/bar-left2.gif" alt="" width="5"
+															height="21" border="0"></img>
+													</td>
+													<td class="framequickmenu_orange" width="100%" align="left">
+														<font color="white"><a href="#"
+															onclick='javascript:document.location.href="../CustomerConnect/login.jsp"'>Customer
+																Login</a> </font>
+													</td>
+													<td height="21">
+														<img src="images/bar-left.gif" alt="" width="5"
+															height="21" border="0"></img>
+													</td>
+												</tr>
+											</table>
+										</td>
+									</tr>
+									<tr>
+										<td>
+											&nbsp;
+										</td>
+									</tr>
+									<tr>
+										<td>
+											<table width="155" cellspacing="0" cellpadding="0">
+												<tr>
+													<td height="21">
+														<img src="images/bar-left2.gif" alt="" width="5"
+															height="21" border="0"></img>
+													</td>
+													<td class="framequickmenu_orange" width="100%" align="left">
+														<font color="white">Register</font>
+													</td>
+													<td height="21">
+														<img src="images/bar-left.gif" alt="" width="5"
+															height="21" border="0"></img>
+													</td>
+												</tr>
+											</table>
+										</td>
+									</tr>
+									<tr>
+										<td>
+											&nbsp;
+										</td>
+									</tr>
+								</table>
+								<!-- #EndLibraryItem -->
+							</td>
+						</tr>
+					</table>
+				</td>
+			</tr>
+			<tr>
+				<table width="100%" cellspacing="0" cellpadding="0" border="0">
+					<tr>
+						<td width="100%" height="30" align="center" bgcolor="#6699FF"
+							class="footer">
+							Copyright &copy; Finacle Technology, Privacy Policy
+						</td>
+					</tr>
+				</table>
+			</tr>
+		</table>
+	</body>
+</html>

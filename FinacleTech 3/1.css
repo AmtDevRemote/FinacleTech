@@ -1,0 +1,16 @@
+body {
+	background-color: #CCE6FF;
+	margin-top: 50px;
+	margin-bottom: 50px;
+	background-image: url(img/d3.jpg);
+}
+.style14 {color: #0000CC; font-style: italic; font-size: 18px;}
+.style21 {
+	color: #FF6600;
+	font-family: Arial, Helvetica, sans-serif;
+}
+.style22 {font-size: 12px}
+.mystyle {
+	background: #00FFCC;
+}
+.style25 {color: #FF6600}

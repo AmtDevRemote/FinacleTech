@@ -1,0 +1,508 @@
+<?xml version="1.0" encoding="ISO-8859-1" ?>
+<!DOCTYPE struts-config PUBLIC	"-//Apache Software Foundation//DTD Struts Configuration 1.1//EN"	"http://jakarta.apache.org/struts/dtds/struts-config_1_1.dtd">          
+<struts-config>
+<form-beans>
+
+	<!--  User Forms  -->
+
+
+	<!--
+	LEA BEANS
+	-->
+	<form-bean name="trapUserForm"				type="org.apache.struts.action.DynaActionForm" >
+		<form-property name="userId"			type="java.lang.String" />
+		<form-property name="startDate"			type="java.lang.String" />
+		<form-property name="endDate"			type="java.lang.String" />
+		<form-property name="blockIM" 			type="java.lang.Boolean" />
+		<form-property name="blockSubscription" type="java.lang.Boolean" />
+	</form-bean>	
+	<form-bean 
+		name="searchTrappedUserForm" 
+		type="org.apache.struts.action.DynaActionForm">
+	</form-bean>
+	<form-bean 
+		name="releaseUserActionForm" 
+		type="org.apache.struts.action.DynaActionForm">
+		<form-property name="userid"	type="java.lang.String" />
+	</form-bean>	
+	<form-bean name="trapUserListActionForm" 	type="org.apache.struts.action.DynaActionForm">
+		<form-property name="userId"			type="java.lang.String" />
+		<form-property name="startDate"			type="java.lang.String" />
+		<form-property name="endDate"			type="java.lang.String" />
+	</form-bean>
+	<form-bean 
+		name="alreadyTrappedUserListForm" 
+		type="org.apache.struts.action.DynaActionForm">
+	</form-bean>
+	
+	<!-- 
+	provisioning Report
+	 -->  
+	 <form-bean name="provisionigUserForm"		type="org.apache.struts.action.DynaActionForm" >
+		<form-property name="mobilenumber"	type="java.lang.String" />
+		<form-property name="alias"			type="java.lang.String" />
+		<form-property name="plan"			type="java.lang.String" />
+	</form-bean> 
+	 
+	 
+	<!--Login-->  
+	<form-bean name="loginForm"         type="org.apache.struts.action.DynaActionForm" >
+		<form-property name="login"		type="java.lang.String" />
+		<form-property name="password"	type="java.lang.String" />
+	</form-bean>
+	
+	<!-- Logout -->
+	<form-bean name="logoutForm"		type="org.apache.struts.action.DynaActionForm" >
+		<form-property name="UserId"	type="java.lang.String" />
+	</form-bean>
+	<form-bean name="alertsForm"		type="org.apache.struts.action.DynaActionForm" >
+		<form-property name="alertname"	type="java.lang.String" />
+		<form-property name="alerttype"	type="java.lang.String" />
+		<form-property name="alerthandler"	type="java.lang.String" />
+		<form-property name="status"	type="java.lang.String" />
+	</form-bean>
+	<form-bean name="queryForm"		type="org.apache.struts.action.DynaActionForm" >
+		<form-property name="queryText"	type="java.lang.String" />
+	</form-bean>
+	<!-- Settings form -->
+	
+	
+	<form-bean name="userForm"		type="org.apache.struts.action.DynaActionForm" >
+		<form-property name="userid"	type="java.lang.String" />
+		<form-property name="password"	type="java.lang.String" />
+		<form-property name="confirmpassword"	type="java.lang.String" />
+		<form-property name="fname"		type="java.lang.String" />
+		<form-property name="lname"		type="java.lang.String" />
+		<form-property name="role"		type="java.lang.String" />
+		<form-property name="email"		type="java.lang.String" />
+		<form-property name="ftp"		type="java.lang.String" />
+	</form-bean> 
+	<form-bean name="roleForm"		type="org.apache.struts.action.DynaActionForm" >
+		<form-property name="roleId"	type="java.lang.String" />
+		<form-property name="roleName"	type="java.lang.String" />
+		<form-property name="roleIds"	type="java.lang.String[]" />
+		<form-property name="permissionIds"	type="java.lang.String[]" />
+	</form-bean> 
+	<form-bean name="distributionListForm"		type="org.apache.struts.action.DynaActionForm" >
+		<form-property name="groupFile" type="org.apache.struts.upload.FormFile"/>
+		<form-property name="groupMessage" type="java.lang.String"/>
+		<form-property name="importFromFile" type="java.lang.String"/>
+		<form-property name="language" type="java.lang.String"/>
+		<form-property name="groupId" type="java.lang.String[]" />
+		<form-property name="groupName"	type="java.lang.String" />
+		<form-property name="groupLanguage"	type="java.lang.String" />
+		<form-property name="serverFile"	type="java.lang.String" />
+		<form-property name="groupDesc"		type="java.lang.String" />
+		<form-property name="groupPriority"		type="java.lang.String" />
+		<form-property name="messageType"		type="java.lang.String" />
+		<form-property name="mode" type="java.lang.String"/>
+		<form-property name="cname" type="java.lang.String[]"/>
+		<form-property name="cnumber" type="java.lang.String[]"/>
+		
+	</form-bean>
+	<form-bean name="bulkMailForm"		type="org.apache.struts.action.DynaActionForm" >
+		<form-property name="groupFile" type="org.apache.struts.upload.FormFile"/>
+		<form-property name="fromName"	type="java.lang.String" />
+		<form-property name="subject"	type="java.lang.String" />
+		<form-property name="message"	type="java.lang.String" />
+	</form-bean>
+	<form-bean name="campaignForm"		type="org.apache.struts.action.DynaActionForm" >
+		<form-property name="campName" type="java.lang.String"/>
+		<form-property name="campMessage" type="java.lang.String"/>
+		<form-property name="responseCode" type="java.lang.String"/>
+		<form-property name="campLanguage" type="java.lang.String"/>
+		<form-property name="campText" type="java.lang.String"/>
+		<form-property name="optionIndex"   type="java.lang.String[]"/>
+		<form-property name="optionText"	type="java.lang.String[]"/>
+		<form-property name="groupId"		type="java.lang.Integer[]"/>
+		<form-property name="campId"	type="java.lang.Integer[]"/>
+		<form-property name="serialId"	type="java.lang.Integer[]"/>
+		<form-property name="newId"		type="java.lang.Integer[]"/>
+	</form-bean>
+	<form-bean name="templateForm"	type="org.apache.struts.action.DynaActionForm" >
+		<form-property name="templateName" type="java.lang.String"/>
+		<form-property name="message" type="java.lang.String"/>
+		<form-property name="mail" type="java.lang.String"/>
+		<form-property name="language" type="java.lang.String"/>
+		<form-property name="templateId"	type="java.lang.String[]" />
+		<form-property name="templateType"	type="java.lang.String" />
+	</form-bean>
+	<form-bean name="enumerationForm"		type="org.apache.struts.action.DynaActionForm" >
+		<form-property name="enumName" type="java.lang.String"/>
+		<form-property name="enumValue" type="java.lang.String"/>
+		<form-property name="language" type="java.lang.String"/>
+		<form-property name="enumId"	type="java.lang.String[]" />
+		<form-property name="enumType"	type="java.lang.String" />
+	</form-bean>
+	<form-bean name="customerForm"		type="org.apache.struts.action.DynaActionForm" >	
+	    <form-property name="searchName" type="java.lang.String"/>
+	    <form-property name="searchMobile" type="java.lang.String"/>
+	    <form-property name="serialId" type="java.lang.Integer[]"/>
+		<form-property name="customerId" type="java.lang.Integer[]"/>
+		<form-property name="groupName" type="java.lang.String"/>
+		<form-property name="firstName" type="java.lang.String[]"/>
+		<form-property name="mobileNumber" type="java.lang.String[]"/>
+		<form-property name="gender" type="java.lang.String[]"/>
+	</form-bean>
+	<form-bean name="statusForm"		type="org.apache.struts.action.DynaActionForm" />
+	<form-bean name="reportForm"		type="org.apache.struts.action.DynaActionForm" >
+		<form-property name="fromDay" type="java.lang.Integer"/>
+		<form-property name="fromMonth" type="java.lang.Integer"/>
+		<form-property name="fromYear" type="java.lang.Integer"/>
+		<form-property name="fromHour" type="java.lang.Integer"/>
+		<form-property name="fromMinute" type="java.lang.Integer"/>
+		<form-property name="toDay" type="java.lang.Integer"/>
+		<form-property name="toMonth" type="java.lang.Integer"/>
+		<form-property name="toYear" type="java.lang.Integer"/>
+		<form-property name="toHour" type="java.lang.Integer"/>
+		<form-property name="toMinute" type="java.lang.Integer"/>
+		<form-property name="transaction" type="java.lang.String"/>
+		<form-property name="source" type="java.lang.String"/>
+		<form-property name="mobile" type="java.lang.String"/>
+		<form-property name="department" type="java.lang.String"/>
+		<form-property name="campaign" type="java.lang.String"/>
+		<form-property name="language" type="java.lang.String"/>
+		<form-property name="cptno" type="java.lang.String"/>
+		<form-property name="status" type="java.lang.String"/>
+		<form-property name="role" type="java.lang.String"/>
+	</form-bean>
+	<form-bean name="settingsForm"	type="org.apache.struts.action.DynaActionForm" >
+		<form-property name="bulkLocal"	type="java.lang.String" />
+		<form-property name="mailTemplateDir"	type="java.lang.String" />
+		<form-property name="deliveryReport"	type="java.lang.String" />
+		<form-property name="accessUser"	type="java.lang.String" />
+		<form-property name="pullServerUrl"	type="java.lang.String" />
+		<form-property name="ipAddress"	type="java.lang.String" />
+		<form-property name="recvIpAddress"	type="java.lang.String" />
+		<form-property name="bindMode"	type="java.lang.String" />
+		<form-property name="recvBindMode"	type="java.lang.String" />
+		<form-property name="port"	type="java.lang.String" />
+		<form-property name="recvPort"	type="java.lang.String" />
+		<form-property name="serviceType"	type="java.lang.String" />
+		<form-property name="recvServiceType"	type="java.lang.String" />
+		<form-property name="userName"	type="java.lang.String" />
+		<form-property name="recvUserName"	type="java.lang.String" />
+		<form-property name="systemType"	type="java.lang.String" />
+		<form-property name="recvSystemType"	type="java.lang.String" />
+		<form-property name="password"	type="java.lang.String" />
+		<form-property name="recvPassword"	type="java.lang.String" />
+		<form-property name="serviceMode"	type="java.lang.String" />
+		<form-property name="recvServiceMode"	type="java.lang.String" />
+		<form-property name="tonSource"	type="java.lang.String" />
+		<form-property name="tonDestination"	type="java.lang.String" />
+		<form-property name="tonRange"	type="java.lang.String" />
+		<form-property name="npiSource"	type="java.lang.String" />
+		<form-property name="npiDestination"	type="java.lang.String" />
+		<form-property name="npiRange"	type="java.lang.String" />
+		<form-property name="addressSource"	type="java.lang.String" />
+		<form-property name="addressDestination"	type="java.lang.String" />
+		<form-property name="addressRange"	type="java.lang.String" />
+		
+		<form-property name="enableDatabaseMonitor"	type="java.lang.String" />
+		<form-property name="pollIntervalDatabase"	type="java.lang.String" />
+		<form-property name="recordCount"	type="java.lang.String" />
+		<form-property name="databaseURL"	type="java.lang.String" />
+		<form-property name="databaseDriverName"	type="java.lang.String" />
+		<form-property name="databaseUserName"	type="java.lang.String" />
+		<form-property name="databasePassword"	type="java.lang.String" />
+		<form-property name="tableName"	type="java.lang.String" />
+		
+		<form-property name="enableFileMonitor"	type="java.lang.String" />
+		<form-property name="PollIntervelFile"	type="java.lang.String" />
+		<form-property name="sourceDirectory"	type="java.lang.String" />
+		<form-property name="destinationDirectory"	type="java.lang.String" />
+		<form-property name="errorDirectory"	type="java.lang.String" />
+		
+		<form-property name="enableLotusMonitor"	type="java.lang.String" />
+		<form-property name="pollingIntervalLotus"	type="java.lang.String" />
+		<form-property name="mailHostLotus"	type="java.lang.String" />
+		<form-property name="arabicUser"	type="java.lang.String" />
+		<form-property name="arabicPassword"	type="java.lang.String" />
+		<form-property name="englishUser"	type="java.lang.String" />
+		<form-property name="englishPassword"	type="java.lang.String" />
+		<form-property name="list"	type="java.lang.String" />
+		<form-property name="accessList"	type="java.lang.String[]" />
+		<form-property name="accessListAdd"	type="java.lang.String" />
+
+		<form-property name="enableMessage"	type="java.lang.String" />
+		<form-property name="logDirectory"	type="java.lang.String" />
+		<form-property name="groupDirectory"	type="java.lang.String" />
+		<form-property name="extGroupDirectory"	type="java.lang.String" />
+
+		<form-property name="enableMail"	type="java.lang.String" />
+		<form-property name="mailHostGeneral"	type="java.lang.String" />
+		<form-property name="emailId"	type="java.lang.String" />
+		<form-property name="sender"	type="java.lang.String" />
+		<form-property name="messageRetry"	type="java.lang.String" />
+		<form-property name="backupHost"	type="java.lang.String" />
+		<form-property name="backupPort"	type="java.lang.String" />
+		<form-property name="enableDebug"	type="java.lang.String" />
+		<form-property name="enableTime"	type="java.lang.String" />
+		<form-property name="startHour"	type="java.lang.String" />
+		<form-property name="startMinute"	type="java.lang.String" />
+		<form-property name="endHour"	type="java.lang.String" />
+		<form-property name="endMinute"	type="java.lang.String" />
+		<form-property name="maxThreads"	type="java.lang.String" />
+		<form-property name="recvMaxThreads"	type="java.lang.String" />
+		<form-property name="bccCount"	type="java.lang.String" />
+		<form-property name="msgsendprotocol"	type="java.lang.String" />
+		<form-property name="httpurl"	type="java.lang.String" />
+		<form-property name="proxyrequired"	type="java.lang.String" />
+		<form-property name="proxyurl"	type="java.lang.String" />
+		<form-property name="proxyport"	type="java.lang.String" />
+		<form-property name="proxyauthtype"	type="java.lang.String" />
+		<form-property name="proxyusername"	type="java.lang.String" />
+		<form-property name="proxypassword"	type="java.lang.String" />
+		<form-property name="proxydomainname"	type="java.lang.String" />
+		<form-property name="httpparamname87"	type="java.lang.String" />
+		<form-property name="httpparamvalue87"	type="java.lang.String" />
+		<form-property name="httpparamname88"	type="java.lang.String" />
+		<form-property name="httpparamvalue88"	type="java.lang.String" />
+		<form-property name="httpparamname89"	type="java.lang.String" />
+		<form-property name="httpparamvalue89"	type="java.lang.String" />
+		<form-property name="httpparamname90"	type="java.lang.String" />
+		<form-property name="httpparamvalue90"	type="java.lang.String" />
+		<form-property name="httpparamname91"	type="java.lang.String" />
+		<form-property name="httpparamvalue91"	type="java.lang.String" />
+		<form-property name="httpparamname92"	type="java.lang.String" />
+		<form-property name="httpparamvalue92"	type="java.lang.String" />
+		<form-property name="httpparamname93"	type="java.lang.String" />
+		<form-property name="httpparamvalue93"	type="java.lang.String" />
+		<form-property name="httpparamname94"	type="java.lang.String" />
+		<form-property name="httpparamvalue94"	type="java.lang.String" />
+		<form-property name="proxyreqauth"	type="java.lang.String" />
+		
+		<form-property name="emailusername"	type="java.lang.String" />
+		<form-property name="emailuserpassword"	type="java.lang.String" />
+		
+		<!-- Queue related properties -->
+		<form-property name="queueHost"	type="java.lang.String" />
+		<form-property name="queuePort"	type="java.lang.String" />
+		<form-property name="queueManager"	type="java.lang.String" />
+		<form-property name="queueChannel"	type="java.lang.String" />
+		<form-property name="sendQueue"	type="java.lang.String" />
+		<form-property name="receiveQueue"	type="java.lang.String" />
+		
+	</form-bean> 
+	<form-bean name="paginationForm" type="com.techunified.webclient.util.PaginationForm">
+	</form-bean>
+</form-beans>
+<global-forwards>
+	<forward name="InvalidSession" 				path="/invalid.jsp" 		redirect="false"/>
+	<forward name="index" 						path="/index.jsp" 			redirect="false"/>
+	<forward name="Success" 					path="/success.jsp" 		redirect="false"/>
+	<forward name="Failure"						path="/error.jsp" 			redirect="false"/>
+	<forward name="NotAuthorized"				path="/notauthorised.jsp" 	redirect="false"/>
+	<forward name="loginpage"					path="/action/loginpage"/>			
+</global-forwards>
+
+<!-- User Forms Ends -->
+
+
+
+<!-- User Action -->
+
+<action-mappings> 
+ 	<!-- Login -->
+ 	<action  path="/openloginpage"
+		    type="com.techunified.webclient.LoginAction"
+			name="loginForm" scope="request" validate="false">
+		<forward name="Success"		path="/admin.jsp"	redirect="false"/>
+	</action>
+  	<action  path="/loginpage"
+		    type="com.techunified.webclient.LoginAction"
+			name="loginForm" scope="request" validate="false">
+		<forward name="Success"		path="/admin.jsp"	redirect="false"/>
+		<forward name="InvalidUser"	path="/login.jsp" 	redirect="false"/>
+  	</action>
+	<action  path="/logoutpage"
+	    	type="com.techunified.webclient.LogoutAction"
+			name="logoutForm"
+			scope="request"
+			validate="false">
+		<forward name="Success"		path="/invalid.jsp" 		redirect="false"/>
+		<forward name="Failure"		path="/invalid.jsp" 		redirect="false"/>
+	</action>
+	<action  path="/reports"
+	    	type="com.techunified.webclient.ReportAction"
+			name="reportForm"
+			scope="request"
+			validate="false">
+		<forward name="ReportCreate"		path="/report.jsp" 		redirect="false"/>
+		<forward name="LogCreate"		path="/logreport.jsp" 		redirect="false"/>
+		<forward name="ReportHTML"			path="/html.jsp" 			redirect="false"/>
+		<forward name="ReportPDF"			path="/pdf.jsp" 		redirect="false"/>
+		<forward name="ReportXLS"			path="/xls.jsp" 		redirect="false"/>
+		<forward name="ReportPrint"			path="/print.jsp" 		redirect="false"/>
+		<forward name="ReportThroughput"			path="/reportThroughput.jsp" 		redirect="false"/>
+		<forward name="ReportProcess"			path="/reportProcess.jsp" 		redirect="false"/>
+		<forward name="Failure"		path="/error.jsp" 		redirect="false"/>
+	</action>
+	<action  path="/serviceleft"
+    	type="com.techunified.webclient.ServiceAction"
+		name="reportsForm"
+		scope="request"
+		validate="false">
+	<forward name="Success"		path="/framemenuleft.jsp" 		redirect="false"/>
+	<forward name="Failure"		path="/error.jsp" 		redirect="false"/>
+	</action>
+	<action  path="/serviceright"
+    	type="com.techunified.webclient.ServiceAction"
+		name="reportsForm"
+		scope="request"
+		validate="false">
+	<forward name="Success"		path="/framemenuright.jsp" 		redirect="false"/>
+	<forward name="Failure"		path="/error.jsp" 		redirect="false"/>
+	</action>
+	<action  path="/status"
+    	type="com.techunified.webclient.StatusAction"
+		name="statusForm"
+		scope="request"
+		validate="false">
+	<forward name="Success"		path="/status.jsp" 		redirect="false" />
+	<forward name="Failure"		path="/error.jsp" 		redirect="false" />
+	<forward name="ErrorLog"    path="/errorLog.jsp"		redirect="false"/>
+	</action>
+	<action  path="/settingsPage"
+	    	type="com.techunified.webclient.LoadSettingAction"
+	    	name="settingsForm"
+	    	scope="request"
+	    	validate="false">
+		<forward name="Success"		path="/settings.jsp" 		redirect="false"  />
+		<forward name="SystemFailure"	path="/error.jsp" 		redirect="false"  />
+	</action>
+	<action  path="/saveSettings"
+	    	type="com.techunified.webclient.SaveSettingAction"
+	    	name="settingsForm"
+	    	scope="request"
+	    	validate="false">
+		<forward name="Success"		path="/action/settingsPage" 		redirect="false"  />
+		<forward name="Failure"		path="/index.jsp" 		redirect="false"/>
+		<forward name="SystemFailure"	path="/error.jsp" 		redirect="false"/>
+	</action>
+	<action  path="/UserListAction"
+		    type="com.techunified.webclient.UserListAction"
+			name="userForm" scope="request" validate="false">
+		<forward name="Success"		path="/userList.jsp" 	redirect="false"  />
+		<forward name="Failure"		path="/error.jsp"		redirect="false"  />
+		<forward name="SystemFailure"	path="/error.jsp" 		redirect="false"  />
+  	</action>
+  	<action  path="/UserEditAction"
+		    type="com.techunified.webclient.UserEditAction"
+			name="userForm" scope="request" validate="false">
+		<forward name="Success"		path="/editUser.jsp" 	redirect="false"  />
+		<forward name="editSuccess"		path="/action/UserListAction" 	redirect="false"  />
+		<forward name="Failure"		path="/error.jsp"		redirect="false"  />
+		<forward name="SystemFailure"	path="/error.jsp" 		redirect="false"  />
+  	</action>
+  	<action path="/UserAddAction" 
+  			type="com.techunified.webclient.UserAddAction"
+  			name="userForm" scope="request" validate="false">
+  		<forward name="Success" path="/action/UserListAction" 	redirect="false" />
+  		<forward name="Failure" path="/addUser.jsp" 			redirect="false" />
+  		<forward name="SystemFailure"	path="/error.jsp" 		redirect="false"  />
+  		<forward name="provisionigUser"	path="/provisionigUser.jsp" 		redirect="false"  />
+  	</action>
+  	<action  path="/UserDeleteAction"
+		    type="com.techunified.webclient.UserDeleteAction"
+			name="userForm" scope="request" validate="false">
+		<forward name="Success"	path="/action/UserListAction" redirect="false"  />
+		<forward name="Failure"	path="/error.jsp"		  redirect="false"  />
+		<forward name="SystemFailure"	path="/error.jsp" 		redirect="false"  />
+  	</action>
+  	<action  path="/ChangeDetailsAction"
+		    type="com.techunified.webclient.ChangeDetailsAction"
+			name="userForm" scope="request" validate="false">
+		<forward name="Success"		path="/changeDetails.jsp" redirect="false"  />
+		<forward name="UpdateSuccess" path="/blank.jsp" redirect="false" />
+		<forward name="Failure"	path="/error.jsp"		redirect="false"  />
+  	</action>
+  	
+  	<action  path="/distributionList"  type="com.techunified.webclient.DistributionListAction"
+			name="distributionListForm" scope="request" validate="false">
+		<forward name="Success"		path="/distributionList.jsp" redirect="false"  />
+		<forward name="addGroup"	path="/addGroup.jsp" redirect="false"  />
+		<forward name="editGroup"	path="/editGroup.jsp" redirect="false"  />
+		<forward name="createMessage"	path="/message.jsp" redirect="false"  />
+		<forward name="createCampaign"	path="/sendCampaign.jsp" redirect="false"  />
+		<forward name="Failure"	path="/error.jsp"		redirect="false"  />
+  	</action>
+  	<action  path="/bulkmail"
+		    type="com.techunified.webclient.BulkMessageAction"
+			name="bulkMailForm" scope="request" validate="false">
+		<forward name="Success"		path="/bulkmail.jsp" redirect="false"  />
+		<forward name="Failure"	path="/error.jsp"		redirect="false"  />
+  	</action>
+  	<action  path="/role"
+		    type="com.techunified.webclient.RoleAction"
+			name="roleForm" scope="request" validate="false">
+		<forward name="Success"		path="/roleList.jsp" redirect="false"  />
+		<forward name="view"		path="/roleList.jsp" redirect="false"  />
+		<forward name="addRole"	path="/addRole.jsp" redirect="false"  />
+		<forward name="editRole"	path="/editRole.jsp" redirect="false"  />
+		<forward name="Failure"	path="/error.jsp"		redirect="false"  />
+  	</action>
+  	<action  path="/templates"
+		    type="com.techunified.webclient.TemplateAction"
+			name="templateForm" scope="request" validate="false">
+		<forward name="Success"		path="/templateList.jsp" redirect="false"  />
+		<forward name="addTemplate"	path="/addTemplate.jsp" redirect="false"  />
+		<forward name="editTemplate"	path="/editTemplate.jsp" redirect="false"  />
+		<forward name="Failure"	path="/error.jsp" redirect="false" />
+		<forward name="displaytemplates" path="/userTemplates.jsp" redirect="false"/>
+  	</action>
+  	<action  path="/enumeration"
+		    type="com.techunified.webclient.EnumerationAction"
+			name="enumerationForm" scope="request" validate="false">
+		<forward name="Success"		path="/enumList.jsp" redirect="false"  />
+		<forward name="addEnum"	path="/addEnum.jsp" redirect="false"  />
+		<forward name="editEnum"	path="/editEnum.jsp" redirect="false"  />
+		<forward name="Failure"	path="/error.jsp"		redirect="false"  />
+  	</action>
+  	<action  path="/campaign"
+		    type="com.techunified.webclient.CampaignAction"
+			name="campaignForm" scope="request" validate="false">
+		<forward name="Success"		path="/campaign.jsp" redirect="false"  />
+		<forward name="view"		path="/campaignList.jsp" redirect="false"  />
+		<forward name="addCampaign"	path="/addCampaign.jsp" redirect="false"  />
+		<forward name="editCampaign"	path="/editCampaign.jsp" redirect="false"  />
+		<forward name="sendCampaign"	path="/sendCampaign.jsp" redirect="false"  />
+		<forward name="Failure"	path="/error.jsp"		redirect="false"  />
+  	</action>
+  	<action  path="/customerList"
+		    type="com.techunified.webclient.CustomerListAction"
+			name="paginationForm" scope="request" validate="false">
+		<forward name="Success"		path="/customer.jsp" redirect="false"  />
+		<forward name="DisplayForView"		path="/customerListForView.jsp" redirect="false"  />
+		<forward name="AddCustomer"		path="/addCustomer.jsp" redirect="false"  />
+		<forward name="Failure"	path="/error.jsp"		redirect="false"  />
+  	</action>
+  	<action  path="/query"
+		    type="com.techunified.webclient.QueryAction"
+			name="queryForm" scope="request" validate="false">
+		<forward name="Success"		path="/dbquery.jsp" redirect="false"  />
+		<forward name="Failure"	path="/error.jsp"		redirect="false"  />
+  	</action>
+	<action path="/customerDisplay"
+  		type="com.techunified.webclient.CustomerDisplayAction"
+  		name="paginationForm" scope="request" validate="false">
+  		<forward name="SearchDisplay" path="/searchCustomerList.jsp" redirect="false"/>
+  		<forward name="ChooseCust" path="/choosecustomer.jsp" redirect="false"/>
+		<forward name="Display" path="/customerList.jsp" redirect="false"/>  	
+		<forward name="DisplayForView" path="/customerListForView.jsp" redirect="false"/>  	
+		<forward name="Temp" path="/temp.jsp" redirect="false"/>  		
+  	</action>
+	<action path="/alerts"
+  		type="com.techunified.webclient.AlertsAction"
+  		name="alertsForm" scope="request" validate="false">
+  		<forward name="Success" path="/showAlerts.jsp" redirect="false"/>
+  		<forward name="showadd" path="/addAlert.jsp" redirect="false"/>
+  		<forward name="showedit" path="/editAlert.jsp" redirect="false"/>
+  		<forward name="showalerts" path="/action/alerts" redirect="false"/>
+  	</action>
+  	
+ 	<!--  User Action End -->	
+  	
+</action-mappings>  
+<message-resources  parameter="ApplicationResources" />
+</struts-config>
